@@ -1,0 +1,14 @@
+{
+  "name": "vicky_foods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./src/styles.css -o ./src/css/styles.css --watch"
+  },
+  "author": "charleeblaq",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

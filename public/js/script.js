@@ -1,6 +1,7 @@
  const hamburger            = document.querySelector('#hamburger');
  const menu                 = document.querySelector('#mobile-menu');
  const hideBtnHamburger     = document.querySelector('#hide-menu-btn');
+ const menuLists            = document.querySelectorAll('.menu-list');
 
 
 
@@ -13,6 +14,15 @@
  hideBtnHamburger.addEventListener('click', ()=>{
     showhide(menu, 'close'); 
  })
+
+ //menu-links====to hide mobile menu when clicked as well....
+ menuLists.forEach((link)=>{
+    link.addEventListener('click', ()=>{
+    showhide(menu, 'close'); 
+ })
+ })
+
+ 
 
 
  function showhide(element, task){

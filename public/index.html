@@ -9,9 +9,16 @@
     <title>Vicky's Foods Order</title>
 </head>
 
-<body class="w-[100%] h-[100vh] bg-primary">
+<body class="w-[100%] h-[100%] bg-primary font-sans">
+    <!-- banner section -->
+    <div id="banner" class="p-2 h-36 w-full grid place-items-center md:p-8  md:h-28 ">
+            <div class="w-full py-2 grid place-items-start md:place-items-center md:w-[50%]">
+                <h5 class=" text-white  text-2xl font-bold md:font-extrabold md:text-4xl md:text-pink-400">Our Foods Are <span class="text-orange-600">Delightful</span></h5>
+                <p class="text-stone-900 md:font-extrabold">Come Taste the Nigerian special Cuisines</p>
+            </div>
+    </div>
     <!-- HEADER SECTION -->
-    <header class="fixed top-0 z-50 w-full flex items-center justify-between py-2 px-6 bg-secondary">
+    <header class="sticky top-0  w-full flex items-center justify-between py-2 px-6 bg-white shadow-xl">
 
         <div>
             <h2 class="text-yellow-600 text-4xl font-bold"><a href="/">Logo</a></h2>
@@ -19,69 +26,82 @@
 
         <!-- bigger screens menu -->
         <nav class="hidden md:block">
-            <ul class="flex flex-row items-center gap-8 text-white font-bold md:font-normal space-x-6">
-                <li class="hover:text-pink-500 transition-colors"><a href="/">Home</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/about">About</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/menu">Menu</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/gallery">Gallery</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/chefs">Chefs</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/contact">Contact</a></li>
+            <ul class="flex flex-row items-center gap-3 text-word font-bold md:font-normal space-x-3">
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="/">Home</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#about-us-section">About</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#gallery-section">Gallery</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#food-menu-section">Menu</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#">Chefs</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#">Contact</a></li>
             </ul> 
         </nav>
 
-        <button class="hidden bg-pink-500 px-6 py-2 rounded md:block">
-            <a href="/gallery" class="text-white">Buy Now</a>
-        </button>
+        <a href="#gallery-section" class="btn hidden md:block">Buy Now</a>
+      
 
-        <div class="block md:hidden">
-            <h3 id="hamburger" class="text-white">Hamburger</h3>
+        <div id="hamburger" class="flex items-center justify-center md:hidden">  
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-word">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+            </svg>
         </div>
 
         <!-- mobile screens menu -->
-        <div id="mobile-menu" class="menu-4-small-screen w-full absolute top-0 left-0 transition-all bg-black drop-shadow-md py-4 hidden">
-
+        
+        <div id="mobile-menu" class="menu-4-small-screen w-full absolute top-0 left-0 right-0 transition-all bg-black drop-shadow-md py-4 hidden rounded">
             <ul class="flex flex-col items-center justify-center space-y-4 text-white font-bold">
-                <li class="hover:text-pink-500 transition-colors"><a href="/">Home</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/about">About</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/menu">Menu</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/gallery">Gallery</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/chefs">Chefs</a></li>
-                <li class="hover:text-pink-500 transition-colors"><a href="/contact">Contact</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="/">Home</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#about-us-section">About</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#gallery-section">Gallery</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#food-menu-section">Menu</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#">Chefs</a></li>
+                <li class="hover:text-pink-500 transition-colors menu-list"><a href="#">Contact</a></li>
 
                 <!-- to hide menu -->
-                <button id="hide-menu-btn" class="mt-4">X</button>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-bold text-white" id="hide-menu-btn">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+                  
             </ul>    
         </div>
+   
 
     </header>
 
     <!-- MAIN SECTION -->
-    <main class="w-[100%] mt-16 pt-6">
+    <main class="w-[100%] pt-1 ">
+
         <!-- Hero section -->
         <section id="Hero-section"
-            class="w-full flex flex-col-reverse items-center justify-between mt-4 mb-8 py-4 px-4 border-b-2 border-b-word md:flex-row">
+            class="w-full flex flex-col-reverse items-center justify-between mt-2 mb-8 py-2 px-4 border-b-2 border-b-word md:flex-row">
             <div class="grid place-items-center px-2 mb-4 mt-4 md:px-5 ">
                 <h1 class="text-1xl mb-1 text-word font-extrabold md:font-bold md:text-4xl md:mb-3">Enjoy Nigerian Delicious Food</h1>
                 <p class="text-sm mb-4">
                     Amaizing delivery service when you call us to place an order!!!
                 </p>
-                <button class=" bg-pink-500 px-6 py-2 rounded"><a href="" class="text-white">Buy Now</a></button>
+                <a href="#gallery-section" class="btn">Buy Now</a>
             </div>
-            <div class="px-2 mb-4">
-                <img src="./img/image-2.jpg" alt="image" class="outline-none rounded">
+            <div class="md:w-[45%] mb-4 card">
+                <img src="./img/main-food.webp" alt="image" class="outline-none w-full object-contain">
+                <div class="m-4">
+                    <p class="text-xs font-bold">fried rice and salad with plaintain</p>
+                </div>
             </div>
         </section>
+
 
         <!-- About us section -->
         <section id="about-us-section"
             class="w-full flex flex-col items-center justify-between mt-4 mb-8 py-8 px-4 border-b-2 border-b-word md:flex-row">
-            <div class="md:w-[45%] px-2 mb-3">
-                <img src="./img/image-2.jpg" alt="image" class="outline-none rounded">
+            <div class="md:w-[45%] card">
+                <img src="./img/resturant-2.jpg" alt="image" class="outline-none w-full object-contain">
+                <div class="m-4">
+                    <p class="text-xs font-bold">Welcome To Vicky's Kitchen</p>
+                </div>
             </div>
 
             <article class="md:w-[45%] px-2 mb-4">
                 <h2 class="text-center text-2xl text-word font-extrabold mb-2 md:text-3xl">ABOUT US</h2>
-                <h5 class="text-center text-2xl text-pink-500">Vicky's Kitchen</h5>
+                <h5 class="text-center text-2xl text-pink-500 mb-2">Vicky's Kitchen</h5>
                 <p class="text-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At illum eligendi odio voluptate cumque
                     suscipit, repellendus tempora accusantium adipisci cum repudiandae tempore accusamus, rerum quidem
                     blanditiis nostrum, aspernatur nulla! Repudiandae distinctio ipsam ad sapiente ipsum possimus id
@@ -99,39 +119,142 @@
         <section id="gallery-section"
             class="w-[100%] flex flex-col items-center justify-evenly mt-4 mb-8 py-8 px-4 border-b-2 border-b-word">
 
-            <div class="heading w-full mb-4">
-                <h4 class="w-full text-center text-2xl font-bold text-word md:text-3xl">Our Gallery Of Cousines</h4>
+            <div class="heading w-full mb-5">
+                <h4 class="w-full text-center text-2xl font-bold text-word md:text-3xl">Our Gallery Of Cuisines</h4>
+                <hr class="w-[30%]">
             </div>
 
 
-            <div class="image-wraper w-full flex flex-col flex-wrap items-center justify-evenly md:flex-row ">
+            <div class="image-wraper w-full md:grid md:grid-cols-3 md:gap-5">
 
-                <div class="md:w-[33.3%] px-2 mb-3 w-[100%]">
-                    <img src="./img/image-2.jpg" alt="image" class="outline-none w-full rounded">
+                <div class="card">
+                    <img src="./img/beans-stew.webp" alt="image" class="outline-none w-full object-contain">
+                    <div class="m-4">
+                        <h6 class="text-word font-bold">Beans and Stew</h6>
+                        <span class="text-2xl">&#x20A6;700</span>
+                        <strong class="block text-xs">place an order</strong>
+                    </div>
                 </div>
-                <div class="md:w-[33.3%] px-2 mb-3 w-[100%]">
-                    <img src="./img/image-2.jpg" alt="image" class="outline-none w-full rounded">
+                <div class="card">
+                    <img src="./img/jollof-beef.jpg" alt="image" class="outline-none w-full object-contain">
+                    <div class="m-4">
+                        <h6 class="text-word font-bold">Jollof Rice and Beef</h6>
+                        <span class="text-2xl">&#x20A6;2300</span>
+                        <strong class="block text-xs">place an order</strong>
+                    </div>
                 </div>
-                <div class="md:w-[33.3%] px-2 mb-3 w-[100%]">
-                    <img src="./img/image-2.jpg" alt="image" class="outline-none w-full rounded">
+                <div class="card">
+                    <img src="./img/semo-effor.jpg" alt="image" class="outline-none w-full object-contain">
+                    <div class="m-4">
+                        <h6 class="text-word font-bold">Semo and Vegetable soup</h6>
+                        <span class="text-2xl">&#x20A6;650</span>
+                        <strong class="block text-xs">place an order</strong>
+                    </div>
                 </div>
-                <div class="md:w-[33.3%] px-2 mb-3 w-[100%]">
-                    <img src="./img/image-2.jpg" alt="image" class="outline-none w-full rounded">
+                <div class="card">
+                    <img src="./img/jollof-egg.jpg" alt="image" class="outline-none w-full object-contain">
+                    <div class="m-4">
+                        <h6 class="text-word font-bold">Jollof and Stew with Egg</h6>
+                        <span class="text-2xl">&#x20A6;4500 </span>
+                        <strong class="block text-xs">place an order</strong>
+                    </div>
                 </div>
-                <div class="md:w-[33.3%] px-2 mb-3 w-[100%]">
-                    <img src="./img/image-2.jpg" alt="image" class="outline-none w-full rounded">
+                <div class="card">
+                    <img src="./img/friedrice-chick.jpg" alt="image" class="outline-none w-full object-contain">
+                    <div class="m-4">
+                        <h6 class="text-word font-bold">Fried Rice and Turkey</h6>
+                        <span class="text-2xl">&#x20A6;3800</span>
+                        <strong class="block text-xs">place an order</strong>
+                    </div>
                 </div>
-                <div class="md:w-[33.3%] px-2 mb-3 w-[100%]">
-                    <img src="./img/image-2.jpg" alt="image" class="outline-none w-full rounded">
+                <div class="card">
+                    <img src="./img/amala-soup.webp" alt="image" class="outline-none w-full object-contain">
+                    <div class="m-4">
+                        <h6 class="text-word font-bold">Amala and Vegetable</h6>
+                        <span class="text-2xl">&#x20A6;1100</span>
+                        <strong class="block text-xs">place an order</strong>
+                    </div>
                 </div>
+                
 
+            </div>
+        </section>
+
+
+        <!-- Menu section -->
+        <section id="food-menu-section"
+            class="w-[100%] flex flex-col items-center justify-evenly mt-4 mb-8 py-8 px-4 border-b-2 border-b-word">
+
+            <div class="heading w-full mb-5">
+                <h4 class="w-full text-center text-2xl font-bold text-word md:text-3xl">Our Food Menu List</h4>
+            </div>
+
+
+            <div class="image-wraper w-full py-5 grid md:grid-cols-2 gap-5">
+
+                <div class="left-hand bg-word text-white text-xs md:text-x p-4 shadow-lg border rounded-lg grid grid-cols-2 md:place-items-center gap-2 mb-4">
+                    <ol>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                    </ol>
+                    <ul class="grid place-content-end">
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                    </ul>
+                </div>
+                <div class="right-hand bg-word text-white text-xs md:text-x p-4 shadow-lg border rounded-lg grid grid-cols-2 md:place-items-center gap-2 mb-4">
+                    <ol>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                        <li>Fried Rice and chicken</li>
+                    </ol>
+                    <ul class="grid place-content-end">
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                        <li>&#x20A6;2600</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
 
     <!-- THE FOOTER SECTION -->
-    <footer class="w-full fixed bottom-0 mt-[100%] z-50">
-        <p class="w-full text-center">&copy; Copyright Reserve Vicky's Food</p>
+    <footer class="w-full h-14 bg-black shadow-slate-400 mt-40 grid place-items-center">
+        <p class="w-full text-center font-bold text-white">&copy; Copyright Reserve &commat; <span class="text-pink-600">Vicky's Food</span></p>
     </footer>
 </body>
 

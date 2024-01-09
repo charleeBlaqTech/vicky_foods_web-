@@ -21,3 +21,10 @@
     background-attachment: fixed;
     object-fit: contain;
 }
+#banner-bottom{
+    width: 100%;
+    background-image: url('../img/potato-stew.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    object-fit: contain;
+}
